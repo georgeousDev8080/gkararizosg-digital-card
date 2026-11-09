@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="el" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Γιώργος Γκαραρίζος · Digital Card</title>
+<meta name="description" content="Digital card του Γιώργου Γκαραρίζου, βιντεογράφου στη Λάρισα. Beauty, events, διαφημιστικά για επιχειρήσεις και car videography.">
+<meta property="og:title" content="Γιώργος Γκαραρίζος · Digital Card">
+<meta property="og:description" content="Βιντεογράφος. Beauty & makeup, events, διαφημιστικά, car videography. Επικοινωνία με email ή Instagram.">
+<meta property="og:type" content="profile">
+<meta name="theme-color" content="#FFFFFF" id="themeColor">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2314161A'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23E5322B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>
+(function(){
+  var t=null,l=null;
+  try{t=localStorage.getItem('gg-theme');l=localStorage.getItem('gg-lang');}catch(e){}
+  if(!t) t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
+  if(!l) l=(navigator.language||'el').toLowerCase().indexOf('el')===0?'el':'en';
+  document.documentElement.setAttribute('data-theme',t);
+  document.documentElement.setAttribute('lang',l);
+})();
+</script>
+<style>
+:root{
+  --bg:#FFFFFF;--ink:#14161A;--muted:#5B616C;--line:#E4E6EA;--tint:#F3F4F6;--card:#FFFFFF;
+  --blue:#1F44E6;--rec:#E5322B;
+  --band:#14161A;--band-ink:#FFFFFF;--band-muted:#B8BDC7;--band-line:#2A2E36;--band-accent:#8FA4FF;
+  --g:clamp(20px,5vw,72px);--ease:cubic-bezier(.65,0,.2,1);
+  color-scheme:light;
+}
+[data-theme="dark"]{
+  --bg:#0F1115;--ink:#ECEDEF;--muted:#9AA1AC;--line:#252931;--tint:#171A20;--card:#14171C;
+  --blue:#8FA4FF;--rec:#FF4D44;
+  --band:#171A20;--band-ink:#ECEDEF;--band-muted:#9AA1AC;--band-line:#2A2E36;--band-accent:#8FA4FF;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Manrope,system-ui,sans-serif;font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased;transition:background-color .4s ease,color .4s ease}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 var(--g)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid transparent;transition:border-color .3s,background-color .4s}
+nav.scrolled{border-color:var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;text-decoration:none;letter-spacing:-.01em;white-space:nowrap}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--rec);flex:none;animation:blink 1.4s steps(2) infinite}
+@keyframes blink{50%{opacity:.2}}
+.navr{display:flex;align-items:center;gap:20px}
+nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0;font-size:15px;font-weight:600}
+nav ul a{text-decoration:none;color:var(--muted);transition:color .2s}
+nav ul a:hover{color:var(--ink)}
+.tools{display:flex;gap:4px}
+.tool{display:grid;place-items:center;min-width:44px;height:44px;padding:0 10px;border:0;border-radius:12px;background:transparent;color:var(--ink);font:inherit;font-size:14px;font-weight:800;cursor:pointer;transition:background-color .2s}
+.tool:hover{background:var(--tint)}
+.tool svg{width:20px;height:20px}
+.tool .on,.tool .off{display:none}
+[data-theme="dark"] .t-theme .moon,[data-theme="light"] .t-theme .sun{display:none}
+.t-sound[aria-pressed="true"] .on,.t-sound[aria-pressed="false"] .off{display:block}
+@media (max-width:860px){nav ul{display:none}}
+@media (max-width:340px){.brand .full{display:none}}
+
+/* hero */
+.hero{padding:clamp(40px,7vw,96px) 0 clamp(72px,9vw,120px)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(40px,6vw,96px);align-items:center}
+.where{display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:600;color:var(--muted)}
+.where svg{width:16px;height:16px}
+h1{margin:20px 0 0;font-size:clamp(50px,6.1vw,96px);line-height:.94;font-weight:800;letter-spacing:-.045em}
+h1 span{display:block}
+.role{margin:28px 0 0;font-size:clamp(20px,2vw,24px);line-height:1.4;max-width:30ch;color:var(--muted)}
+.role b{color:var(--ink);font-weight:700}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;font:inherit;font-size:16px;font-weight:700;text-decoration:none;cursor:pointer;border:1.5px solid var(--ink);background:transparent;color:var(--ink);transition:background-color .2s,color .2s,border-color .2s,transform .15s}
+.btn:active{transform:scale(.97)}
+.btn svg{width:19px;height:19px;flex:none}
+.btn.primary{background:var(--ink);color:var(--bg)}
+.btn.primary:hover{background:var(--blue);border-color:var(--blue);color:#fff}
+[data-theme="dark"] .btn.primary:hover{color:#0F1115}
+.btn:not(.primary):hover{border-color:var(--blue);color:var(--blue)}
+
+/* frame */
+.stage{position:relative;height:clamp(360px,44vw,560px);display:grid;place-items:center}
+.frame{position:relative;width:var(--w,100%);height:var(--h,56.25%);transition:width 1s var(--ease),height 1s var(--ease),background-color .4s;border-radius:14px;background:var(--tint);overflow:hidden}
+.frame::before{content:"";position:absolute;inset:0;background:
+  linear-gradient(var(--line),var(--line)) 33.333% 0/1px 100% no-repeat,
+  linear-gradient(var(--line),var(--line)) 66.666% 0/1px 100% no-repeat,
+  linear-gradient(var(--line),var(--line)) 0 33.333%/100% 1px no-repeat,
+  linear-gradient(var(--line),var(--line)) 0 66.666%/100% 1px no-repeat}
+.tick{position:absolute;width:22px;height:22px;border:0 solid var(--ink)}
+.tick.tl{left:14px;top:14px;border-left-width:2px;border-top-width:2px}
+.tick.tr{right:14px;top:14px;border-right-width:2px;border-top-width:2px}
+.tick.bl{left:14px;bottom:14px;border-left-width:2px;border-bottom-width:2px}
+.tick.br{right:14px;bottom:14px;border-right-width:2px;border-bottom-width:2px}
+.focus{position:absolute;left:50%;top:50%;width:38px;height:38px;margin:-19px 0 0 -19px;border:1.5px solid var(--ink);border-radius:50%;opacity:.45;transition:transform .5s var(--ease)}
+.focus::after{content:"";position:absolute;left:50%;top:50%;width:4px;height:4px;margin:-2px 0 0 -2px;border-radius:50%;background:var(--ink)}
+.frame.shift .focus{transform:scale(.8)}
+.hud{position:absolute;left:44px;right:44px;top:18px;display:flex;justify-content:space-between;align-items:center;font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.hud .rec{display:flex;align-items:center;gap:7px}
+.ratio{position:absolute;left:44px;bottom:16px;font-size:clamp(28px,3vw,40px);font-weight:800;letter-spacing:-.03em;font-variant-numeric:tabular-nums;line-height:1}
+.ratio small{display:block;font-size:13px;font-weight:600;letter-spacing:0;color:var(--muted);margin-top:6px}
+.swap{transition:opacity .25s ease}
+.frame.shift .swap{opacity:0}
+.caption{position:absolute;right:0;bottom:-34px;font-size:14px;font-weight:600;color:var(--muted)}
+@media (max-width:880px){.hero .wrap{grid-template-columns:1fr}.stage{height:min(108vw,520px)}.caption{right:auto;left:0}}
+@media (max-width:420px){.hud{left:40px;right:40px;font-size:12px}.ratio{left:40px}}
+
+/* intro once */
+.in{opacity:0;transform:translateY(18px);animation:up .9s var(--ease) forwards}
+.in.d1{animation-delay:.08s}.in.d2{animation-delay:.18s}.in.d3{animation-delay:.28s}.in.d4{animation-delay:.38s}
+@keyframes up{to{opacity:1;transform:none}}
+/* gentle reveal on scroll */
+.rv{opacity:0;transform:translateY(14px);transition:opacity .8s ease,transform .8s var(--ease)}
+.rv.seen{opacity:1;transform:none}
+
+/* sections */
+section{padding:clamp(72px,10vw,136px) 0;border-top:1px solid var(--line);transition:border-color .4s}
+.split{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(32px,5vw,80px)}
+h2{margin:0;font-size:clamp(34px,4vw,52px);line-height:1.02;font-weight:800;letter-spacing:-.035em}
+.sticky{position:sticky;top:108px;align-self:start}
+.sticky p{margin:18px 0 0;color:var(--muted);max-width:30ch}
+@media (max-width:880px){.split{grid-template-columns:1fr}.sticky{position:static}}
+
+/* fields */
+.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.field{position:relative;padding:28px 28px 30px;border:1px solid var(--line);border-radius:20px;background:var(--card);transition:border-color .3s,background-color .4s,transform .4s var(--ease)}
+.field:hover{border-color:color-mix(in srgb,var(--blue) 45%,var(--line));transform:translateY(-3px)}
+.field svg{width:52px;height:52px;color:var(--ink);margin-bottom:28px}
+.field svg .draw{stroke-dasharray:var(--len,120);stroke-dashoffset:0;transition:stroke-dashoffset .9s var(--ease)}
+.field:hover svg .draw{animation:draw 1.1s var(--ease)}
+@keyframes draw{from{stroke-dashoffset:var(--len,120)}to{stroke-dashoffset:0}}
+.field svg .acc{color:var(--blue);stroke:var(--blue)}
+.field h3{margin:0 0 8px;font-size:clamp(21px,2vw,25px);line-height:1.2;font-weight:700;letter-spacing:-.02em}
+.field p{margin:0;color:var(--muted);font-size:17px}
+.field .spec{display:flex;align-items:center;gap:8px;margin:14px 0 0;font-size:16px;font-weight:700;color:var(--ink)}
+.field .spec::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--blue);flex:none}
+.kicker{margin:4px 0 20px;font-size:18px;font-weight:700;color:var(--muted)}
+.field .ex{list-style:none;margin:18px 0 0;padding:16px 0 0;border-top:1px solid var(--line);display:grid;gap:8px;font-size:16px;color:var(--ink)}
+.field .ex li{display:flex;gap:10px;align-items:baseline}
+.field .ex li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--muted);flex:none;transform:translateY(-3px)}
+.more{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;padding:26px 28px;border:1.5px dashed var(--line);border-radius:20px}
+.more div{max-width:58ch}
+.more h3{margin:0 0 6px;font-size:21px;font-weight:700;letter-spacing:-.01em}
+.more p{margin:0;color:var(--muted);font-size:17px}
+@media (max-width:640px){.fields{grid-template-columns:1fr}.field{padding:24px}}
+
+/* steps */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 40px;counter-reset:s}
+.steps li{counter-increment:s}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--ink);color:var(--bg);font-weight:800;font-size:16px;margin-bottom:18px}
+.steps h3{margin:0 0 6px;font-size:22px;font-weight:700;letter-spacing:-.01em}
+.steps p{margin:0;color:var(--muted)}
+@media (max-width:600px){.steps{grid-template-columns:1fr;gap:36px}}
+
+/* reasons */
+.reason{display:grid;grid-template-columns:56px minmax(0,1fr);gap:20px;padding:28px 0;border-bottom:1px solid var(--line)}
+.reason:first-child{padding-top:4px}
+.reason svg{width:28px;height:28px;color:var(--blue);margin-top:3px}
+.reason h3{margin:0 0 6px;font-size:22px;font-weight:700;letter-spacing:-.01em}
+.reason p{margin:0;color:var(--muted);max-width:56ch}
+
+/* contact */
+.contact{background:var(--band);color:var(--band-ink);border-top:0}
+.contact h2{font-size:clamp(40px,6vw,84px);max-width:14ch}
+.contact .lead{margin:24px 0 0;color:var(--band-muted);max-width:46ch;font-size:clamp(18px,1.6vw,20px)}
+.mail{display:inline-block;margin-top:48px;font-size:clamp(24px,4.6vw,56px);font-weight:800;letter-spacing:-.03em;line-height:1.1;text-decoration:none;overflow-wrap:anywhere;border-bottom:3px solid var(--band-line);transition:border-color .3s}
+.mail:hover{border-color:var(--band-ink)}
+.contact .row{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:36px}
+.contact .btn{border-color:var(--band-ink);color:var(--band-ink)}
+.contact .btn.primary{background:var(--band-ink);color:var(--band)}
+.contact .btn.primary:hover{background:var(--band-accent);border-color:var(--band-accent);color:#0F1115}
+.contact .btn:not(.primary):hover{border-color:var(--band-accent);color:var(--band-accent)}
+.status{font-size:15px;font-weight:700;color:var(--band-accent)}
+footer{background:var(--band);color:var(--band-muted);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-top:28px;padding-bottom:28px;border-top:1px solid var(--band-line)}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .in,.rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="dot" aria-hidden="true"></span><span data-i="brand">Γ.<span class="full"> Γκαραρίζος</span></span></a>
+    <div class="navr">
+      <ul>
+        <li><a href="#fields" data-i="navFields">Υπηρεσίες</a></li>
+        <li><a href="#process" data-i="navProcess">Διαδικασία</a></li>
+        <li><a href="#contact" data-i="navContact">Επικοινωνία</a></li>
+      </ul>
+      <div class="tools">
+        <button class="tool t-lang" type="button" id="langBtn" aria-label="Switch to English">EN</button>
+        <button class="tool t-theme" type="button" id="themeBtn" aria-label="Αλλαγή θέματος">
+          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <button class="tool t-sound" type="button" id="soundBtn" aria-pressed="true" aria-label="Ήχοι">
+          <svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/></svg>
+          <svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="m22 9-6 6M16 9l6 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="where in"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><span data-i="city">Λάρισα</span></span>
+      <h1 class="in d1" data-i="name"><span>Γιώργος</span><span>Γκαραρίζος</span></h1>
+      <p class="role in d2" data-i="role"><b>Βιντεογράφος.</b> Αναλαμβάνω ολόκληρη την παραγωγή, από το πρώτο πλάνο ως το τελικό αρχείο.</p>
+      <div class="cta in d3">
+        <a class="btn primary" href="mailto:gkararizosg@gmail.com" data-snd="tap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+          <span data-i="sendEmail">Στείλτε email</span></a>
+        <a class="btn" href="https://www.instagram.com/gararizosgeorge/" target="_blank" rel="noopener" data-snd="tap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>
+          Instagram</a>
+      </div>
+    </div>
+
+    <div class="stage in d4" id="stage" aria-hidden="true">
+      <div class="frame" id="frame">
+        <span class="tick tl"></span><span class="tick tr"></span><span class="tick bl"></span><span class="tick br"></span>
+        <span class="focus"></span>
+        <div class="hud"><span class="rec"><span class="dot"></span>REC</span><span id="tc">00:00:00:00</span></div>
+        <div class="ratio swap"><span id="ratio">16:9</span><small id="use"></small></div>
+      </div>
+      <span class="caption" data-i="caption">Ένα γύρισμα, κάθε format.</span>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="fields">
+  <div class="wrap split">
+    <div class="sticky">
+      <h2 data-i="fieldsTitle">Ό,τι χρειαστείτε, σωστά σχεδιασμένο.</h2>
+      <p data-i="fieldsSub">Αναλαμβάνω όποιο project βίντεο χρειαστείτε, με καλή συνεννόηση και σωστό planning από την αρχή.</p>
+      <a class="btn" href="#contact" data-snd="tap" style="margin-top:28px" data-i="moreCta">Πείτε μου την ιδέα σας</a>
+    </div>
+    <div>
+    <h3 class="kicker" data-i="expTitle">Τομείς εξειδίκευσης</h3>
+    <div class="fields">
+      <article class="field rv">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="draw" style="--len:90" d="M18 44V24h12v20z"/><path class="draw acc" style="--len:60" d="M20 24V12l8-6v18"/><path d="M14 44h20"/></svg>
+        <h3 data-i="f1t"></h3>
+        <p data-i="f1p"></p>
+        <ul class="ex" data-i="f1l"></ul>
+      </article>
+      <article class="field rv">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="draw" style="--len:100" d="M7 41l11-25 14 14z"/><path d="M13 29l6 6M10.5 35l2.5 2.5"/><path class="acc draw" style="--len:40" d="M24 13c2-3 5-2.5 6-6.5M34 21c3-1.5 5.5 1 9-1"/><circle class="acc" cx="38" cy="10" r="1.6"/><circle class="acc" cx="41" cy="28" r="1.6"/><circle class="acc" cx="30" cy="18" r="1.2"/></svg>
+        <h3 data-i="f2t"></h3>
+        <p data-i="f2p"></p>
+        <ul class="ex" data-i="f2l"></ul>
+      </article>
+      <article class="field rv">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="draw" style="--len:140" d="M8 20v22h32V20"/><path class="draw acc" style="--len:110" d="M6 20l4-12h28l4 12c0 3-2.5 5-5 5s-5-2-5-5c0 3-2.5 5-5 5s-5-2-5-5c0 3-2.5 5-5 5s-5-2-5-5c0 3-2.5 5-5 5s-5-2-5-5z"/><path d="M20 42V32h8v10"/></svg>
+        <h3 data-i="f3t"></h3>
+        <p data-i="f3p"></p>
+        <ul class="ex" data-i="f3l"></ul>
+      </article>
+      <article class="field rv">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="draw" style="--len:150" d="M5 32v-6l5-2 6-8h14l8 8 5 1.5V32h-4"/><path d="M15 32h14"/><circle class="acc" cx="11" cy="32" r="4"/><circle class="acc" cx="33" cy="32" r="4"/></svg>
+        <h3 data-i="f4t"></h3>
+        <p data-i="f4p"></p>
+        <ul class="ex" data-i="f4l"></ul>
+      </article>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap split">
+    <div class="sticky">
+      <h2 data-i="procTitle">Πώς δουλεύουμε</h2>
+      <p data-i="procSub">Τέσσερα βήματα, χωρίς εκπλήξεις.</p>
+    </div>
+    <ol class="steps">
+      <li class="rv"><h3 data-i="s1t">Συζήτηση</h3><p data-i="s1p">Ορίζουμε στόχο, ύφος, διάρκεια και πού θα δημοσιευτεί το βίντεο.</p></li>
+      <li class="rv"><h3 data-i="s2t">Γύρισμα</h3><p data-i="s2p">Στη μέρα και την ώρα που σας εξυπηρετεί.</p></li>
+      <li class="rv"><h3 data-i="s3t">Μοντάζ</h3><p data-i="s3p">Επιλογή πλάνων, χρώμα, ήχος, μουσική και τίτλοι.</p></li>
+      <li class="rv"><h3 data-i="s4t">Παράδοση</h3><p data-i="s4p">Λαμβάνετε το τελικό αρχείο, έτοιμο για ανέβασμα.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap split">
+    <div class="sticky"><h2 data-i="whyTitle">Τι κερδίζετε</h2></div>
+    <div>
+      <div class="reason rv">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+        <div><h3 data-i="w1t">Έναν συνομιλητή</h3><p data-i="w1p">Δεν συντονίζετε κάμεραμαν, μοντέρ και ηχολήπτη. Μιλάτε μόνο με εμένα και ξέρετε ποιος είναι υπεύθυνος για το αποτέλεσμα.</p></div>
+      </div>
+      <div class="reason rv">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 8-6 4 6 4V8z"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg>
+        <div><h3 data-i="w2t">Τίποτα να οργανώσετε</h3><p data-i="w2p">Έρχομαι στον χώρο σας με δικό μου επαγγελματικό εξοπλισμό εικόνας και ήχου. Εσείς χρειάζεται μόνο να είστε εκεί.</p></div>
+      </div>
+      <div class="reason rv">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <div><h3 data-i="w3t">Διακριτικότητα</h3><p data-i="w3p">Ό,τι μου ζητήσετε να μείνει ιδιωτικό, μένει ιδιωτικό. Αρκετοί πελάτες προτιμούν να μη φαίνεται ποιος γύρισε το υλικό τους, γι' αυτό στο Instagram μου θα δείτε μόνο ένα μέρος της δουλειάς μου.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2 data-i="cTitle">Πείτε μου τι θέλετε να γυρίσουμε.</h2>
+    <p class="lead" data-i="cLead">Δύο γραμμές αρκούν για αρχή: τι χρειάζεστε και πότε. Τα υπόλοιπα τα βρίσκουμε μαζί.</p>
+    <a class="mail" href="mailto:gkararizosg@gmail.com" data-snd="tap">gkararizosg@gmail.com</a>
+    <div class="row">
+      <a class="btn primary" href="mailto:gkararizosg@gmail.com" data-snd="tap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+        <span data-i="sendEmail">Στείλτε email</span></a>
+      <button class="btn" type="button" id="copy">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        <span data-i="copy">Αντιγραφή email</span></button>
+      <a class="btn" href="https://www.instagram.com/gararizosgeorge/" target="_blank" rel="noopener" data-snd="tap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>
+        @gararizosgeorge</a>
+      <button class="btn" type="button" id="vcard">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg>
+        <span data-i="save">Αποθήκευση επαφής</span></button>
+      <span class="status" id="status" role="status" aria-live="polite"></span>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> <span data-i="fname">Γιώργος Γκαραρίζος</span></span>
+    <span data-i="fline">Digital card · Βιντεογράφος, Λάρισα</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const T = {
+    el: {
+      f1t:'Beauty &amp; makeup',
+      f1p:'Φως, χρώμα και λεπτομέρεια που δείχνουν τη δουλειά σας όπως είναι.',
+      f1l:'<li>Makeup artists</li><li>Κομμωτήρια &amp; barber shops</li><li>Nail &amp; beauty studios</li><li>Προϊόντα ομορφιάς &amp; περιποίησης</li>',
+      f2t:'Events',
+      f2p:'Η ενέργεια, ο κόσμος και οι στιγμές μιας διοργάνωσης.',
+      f2l:'<li>Εγκαίνια καταστημάτων</li><li>Εταιρικά events &amp; συνέδρια</li><li>Gaming events, τουρνουά &amp; conventions</li><li>Social events</li><li>Γενέθλια &amp; πάρτι</li><li>Συναυλίες &amp; live εμφανίσεις</li>',
+      f3t:'Διαφημιστικά για επιχειρήσεις',
+      f3p:'Για επιχειρήσεις που προσφέρουν υπηρεσίες. Τι κάνετε και γιατί να επιλέξουν εσάς.',
+      f3l:'<li>Εστιατόρια &amp; καφέ</li><li>Γυμναστήρια &amp; studio</li><li>Ιατρεία &amp; κλινικές</li><li>Ξενοδοχεία &amp; καταλύματα</li>',
+      f4t:'Car videography',
+      f4p:'Γραμμές, λεπτομέρειες και κίνηση.',
+      f4l:'<li>Εταιρείες &amp; αντιπροσωπείες που παρουσιάζουν τα αυτοκίνητά τους</li><li>Ιδιοκτήτες &amp; συλλέκτες</li><li>Συνεργεία, detailing &amp; wrapping</li><li>Car meets &amp; εκδηλώσεις</li>',
+      title:'Γιώργος Γκαραρίζος · Digital Card', brand:'Γ.<span class="full"> Γκαραρίζος</span>',
+      navFields:'Υπηρεσίες', navProcess:'Διαδικασία', navContact:'Επικοινωνία',
+      city:'Λάρισα',
+      name:'<span>Γιώργος</span><span>Γκαραρίζος</span>',
+      role:'<b>Βιντεογράφος.</b> Αναλαμβάνω ολόκληρη την παραγωγή, από το πρώτο πλάνο ως το τελικό αρχείο.',
+      sendEmail:'Στείλτε email', caption:'Ένα γύρισμα, κάθε format.',
+      fieldsTitle:'Ό,τι χρειαστείτε, σωστά σχεδιασμένο.', fieldsSub:'Αναλαμβάνω όποιο project βίντεο χρειαστείτε, με καλή συνεννόηση και σωστό planning από την αρχή.', expTitle:'Τομείς εξειδίκευσης',
+      moreT:'Κάτι διαφορετικό;', moreP:'Προσαρμόζομαι εύκολα. Με καλή συνεννόηση και σωστό σχεδιασμό από την αρχή, αναλαμβάνω τα περισσότερα projects βίντεο.', moreCta:'Πείτε μου την ιδέα σας',
+      procTitle:'Πώς δουλεύουμε', procSub:'Τέσσερα βήματα, χωρίς εκπλήξεις.',
+      s1t:'Συζήτηση', s1p:'Ορίζουμε στόχο, ύφος, διάρκεια και πού θα δημοσιευτεί το βίντεο.',
+      s2t:'Γύρισμα', s2p:'Στη μέρα και την ώρα που σας εξυπηρετεί.',
+      s3t:'Μοντάζ', s3p:'Επιλογή πλάνων, χρώμα, ήχος, μουσική και τίτλοι.',
+      s4t:'Παράδοση', s4p:'Λαμβάνετε το τελικό αρχείο, έτοιμο για ανέβασμα.',
+      whyTitle:'Τι κερδίζετε',
+      w1t:'Έναν συνομιλητή', w1p:'Δεν συντονίζετε κάμεραμαν, μοντέρ και ηχολήπτη. Μιλάτε μόνο με εμένα και ξέρετε ποιος είναι υπεύθυνος για το αποτέλεσμα.',
+      w2t:'Τίποτα να οργανώσετε', w2p:'Έρχομαι στον χώρο σας με δικό μου επαγγελματικό εξοπλισμό εικόνας και ήχου. Εσείς χρειάζεται μόνο να είστε εκεί.',
+      w3t:'Διακριτικότητα', w3p:'Ό,τι μου ζητήσετε να μείνει ιδιωτικό, μένει ιδιωτικό. Αρκετοί πελάτες προτιμούν να μη φαίνεται ποιος γύρισε το υλικό τους, γι\' αυτό στο Instagram μου θα δείτε μόνο ένα μέρος της δουλειάς μου.',
+      cTitle:'Πείτε μου τι θέλετε να γυρίσουμε.', cLead:'Δύο γραμμές αρκούν για αρχή: τι χρειάζεστε και πότε. Τα υπόλοιπα τα βρίσκουμε μαζί.',
+      copy:'Αντιγραφή email', copied:'Το email αντιγράφηκε', save:'Αποθήκευση επαφής',
+      fname:'Γιώργος Γκαραρίζος', fline:'Digital card · Βιντεογράφος, Λάρισα',
+      langLabel:'Switch to English', themeLabel:'Αλλαγή θέματος', soundLabel:'Ήχοι',
+      fmt:['YouTube, ιστοσελίδα','Reels, TikTok, Stories','Instagram feed, LinkedIn','Τετράγωνο post']
+    },
+    en: {
+      f1t:'Beauty &amp; makeup',
+      f1p:'Light, colour and detail that show your work as it really is.',
+      f1l:'<li>Makeup artists</li><li>Hair salons &amp; barber shops</li><li>Nail &amp; beauty studios</li><li>Beauty &amp; skincare products</li>',
+      f2t:'Events',
+      f2p:'The energy, the people and the moments of an event.',
+      f2l:'<li>Store openings</li><li>Corporate events &amp; conferences</li><li>Gaming events, tournaments &amp; conventions</li><li>Social events</li><li>Birthdays &amp; parties</li><li>Concerts &amp; live shows</li>',
+      f3t:'Ads for businesses',
+      f3p:'For businesses that offer services. What you do, and why customers should choose you.',
+      f3l:'<li>Restaurants &amp; cafés</li><li>Gyms &amp; studios</li><li>Clinics &amp; medical practices</li><li>Hotels &amp; rentals</li>',
+      f4t:'Car videography',
+      f4p:'Lines, details and motion.',
+      f4l:'<li>Companies &amp; dealerships showcasing their cars</li><li>Owners &amp; collectors</li><li>Garages, detailing &amp; wrapping</li><li>Car meets &amp; events</li>',
+      title:'George Gkararizos · Digital Card', brand:'G.<span class="full"> Gkararizos</span>',
+      navFields:'Services', navProcess:'Process', navContact:'Contact',
+      city:'Larissa, Greece',
+      name:'<span>George</span><span>Gkararizos</span>',
+      role:'<b>Videographer.</b> I handle the whole production, from the first shot to the final file.',
+      sendEmail:'Send an email', caption:'One shoot, every format.',
+      fieldsTitle:'Whatever you need, properly planned.', fieldsSub:'I take on whatever video project you need, with good communication and proper planning from the start.', expTitle:'Areas of expertise',
+      moreT:'Something different?', moreP:'I adapt easily. With good communication and proper planning from the start, I take on most video projects.', moreCta:'Tell me your idea',
+      procTitle:'How we work', procSub:'Four steps, no surprises.',
+      s1t:'Brief', s1p:'We agree on the goal, style, length and where the video will be published.',
+      s2t:'Shoot', s2p:'On the day and at the time that suit you.',
+      s3t:'Edit', s3p:'Shot selection, colour, sound, music and titles.',
+      s4t:'Delivery', s4p:'You receive the final file, ready to upload.',
+      whyTitle:'What you get',
+      w1t:'One point of contact', w1p:'No need to coordinate a camera operator, an editor and a sound engineer. You talk only to me and you know who is responsible for the result.',
+      w2t:'Nothing to organise', w2p:'I come to your location with my own professional video and audio equipment. All you need to do is be there.',
+      w3t:'Discretion', w3p:'Whatever you ask me to keep private stays private. Many clients prefer not to show who filmed their content, so my Instagram shows only part of my work.',
+      cTitle:'Tell me what you want to shoot.', cLead:'Two lines are enough to start: what you need and when. We will work out the rest together.',
+      copy:'Copy email', copied:'Email copied', save:'Save contact',
+      fname:'George Gkararizos', fline:'Digital card · Videographer, Larissa',
+      langLabel:'Αλλαγή σε Ελληνικά', themeLabel:'Toggle theme', soundLabel:'Sounds',
+      fmt:['YouTube, website','Reels, TikTok, Stories','Instagram feed, LinkedIn','Square post']
+    }
+  };
+  const root = document.documentElement;
+  const store = (k,v) => { try{ v===undefined ? null : localStorage.setItem(k,v); }catch(e){} };
+  const read = k => { try{ return localStorage.getItem(k); }catch(e){ return null; } };
+  let lang = root.getAttribute('lang') === 'en' ? 'en' : 'el';
+
+  /* ---------- sound: soft, short, only on your actions ---------- */
+  let ctx = null, soundOn = read('gg-sound') !== 'off';
+  const soundBtn = document.getElementById('soundBtn');
+  soundBtn.setAttribute('aria-pressed', String(soundOn));
+  function tone(freq, start, dur, vol, type){
+    const o = ctx.createOscillator(), g = ctx.createGain();
+    o.type = type || 'sine'; o.frequency.setValueAtTime(freq, ctx.currentTime + start);
+    g.gain.setValueAtTime(0, ctx.currentTime + start);
+    g.gain.linearRampToValueAtTime(vol, ctx.currentTime + start + 0.008);
+    g.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + start + dur);
+    o.connect(g).connect(ctx.destination); o.start(ctx.currentTime + start); o.stop(ctx.currentTime + start + dur + 0.02);
+  }
+  function play(kind, force){
+    if (!soundOn && !force) return;
+    try{
+      ctx = ctx || new (window.AudioContext || window.webkitAudioContext)();
+      if (ctx.state === 'suspended') ctx.resume();
+      if (kind === 'tap')    { tone(880, 0, .06, .035); }
+      if (kind === 'switch') { tone(520, 0, .07, .03); tone(780, .06, .09, .03); }
+      if (kind === 'copy')   { tone(660, 0, .1, .03); tone(990, .08, .16, .028); }
+      if (kind === 'shutter'){ tone(1400, 0, .025, .03, 'triangle'); tone(900, .045, .03, .025, 'triangle'); }
+    }catch(e){}
+  }
+  document.querySelectorAll('[data-snd]').forEach(el => el.addEventListener('click', () => play(el.dataset.snd)));
+  soundBtn.addEventListener('click', () => {
+    soundOn = !soundOn; soundBtn.setAttribute('aria-pressed', String(soundOn));
+    store('gg-sound', soundOn ? 'on' : 'off');
+    if (soundOn) play('switch', true);
+  });
+
+  /* ---------- language ---------- */
+  const langBtn = document.getElementById('langBtn'), themeBtn = document.getElementById('themeBtn');
+  function applyLang(){
+    const d = T[lang];
+    root.setAttribute('lang', lang);
+    document.title = d.title;
+    document.querySelectorAll('[data-i]').forEach(el => { const v = d[el.dataset.i]; if (v !== undefined) el.innerHTML = v; });
+    langBtn.textContent = lang === 'el' ? 'EN' : 'ΕΛ';
+    langBtn.setAttribute('aria-label', d.langLabel);
+    themeBtn.setAttribute('aria-label', d.themeLabel);
+    soundBtn.setAttribute('aria-label', d.soundLabel);
+    document.getElementById('use').textContent = d.fmt[i];
+  }
+  langBtn.addEventListener('click', () => { lang = lang === 'el' ? 'en' : 'el'; store('gg-lang', lang); applyLang(); play('switch'); });
+
+  /* ---------- theme ---------- */
+  const themeColor = document.getElementById('themeColor');
+  function syncThemeColor(){ themeColor.setAttribute('content', root.getAttribute('data-theme') === 'dark' ? '#0F1115' : '#FFFFFF'); }
+  themeBtn.addEventListener('click', () => {
+    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next); store('gg-theme', next); syncThemeColor(); play('switch');
+  });
+  syncThemeColor();
+
+  /* ---------- nav border ---------- */
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', scrollY > 8);
+  addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  /* ---------- timecode 25fps ---------- */
+  const tc = document.getElementById('tc'), t0 = performance.now(), pad = n => String(n).padStart(2,'0');
+  (function tick(now){
+    const f = Math.floor((now - t0) / 40);
+    tc.textContent = pad(Math.floor(f/90000)) + ':' + pad(Math.floor(f/1500)%60) + ':' + pad(Math.floor(f/25)%60) + ':' + pad(f%25);
+    requestAnimationFrame(tick);
+  })(t0);
+
+  /* ---------- frame through the formats ---------- */
+  const formats = [{r:'16:9',w:16,h:9},{r:'9:16',w:9,h:16},{r:'4:5',w:4,h:5},{r:'1:1',w:1,h:1}];
+  const stage = document.getElementById('stage'), frame = document.getElementById('frame');
+  const ratio = document.getElementById('ratio'), use = document.getElementById('use');
+  let i = 0;
+  function fit(){
+    const fm = formats[i], W = stage.clientWidth, H = stage.clientHeight, s = Math.min(W/fm.w, H/fm.h);
+    frame.style.setProperty('--w', Math.round(fm.w*s) + 'px');
+    frame.style.setProperty('--h', Math.round(fm.h*s) + 'px');
+  }
+  function show(){
+    frame.classList.add('shift');
+    fit();
+    setTimeout(() => { ratio.textContent = formats[i].r; use.textContent = T[lang].fmt[i]; frame.classList.remove('shift'); }, 420);
+  }
+  ratio.textContent = formats[0].r; use.textContent = T[lang].fmt[0]; fit();
+  addEventListener('resize', fit);
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    setInterval(() => { if (!document.hidden) { i = (i + 1) % formats.length; show(); } }, 3200);
+  }
+
+  /* ---------- gentle reveal ---------- */
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { const el = e.target; const sib = [...el.parentElement.children].filter(c => c.classList.contains('rv')); el.style.transitionDelay = (sib.indexOf(el) * 70) + 'ms'; el.classList.add('seen'); io.unobserve(el); }
+  }), {threshold:.12, rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+  /* ---------- copy email ---------- */
+  const status = document.getElementById('status');
+  let st;
+  function say(msg){ status.textContent = msg; clearTimeout(st); st = setTimeout(() => status.textContent = '', 2500); }
+  document.getElementById('copy').addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText('gkararizosg@gmail.com'); say(T[lang].copied); play('copy'); }
+    catch(e){ say('gkararizosg@gmail.com'); }
+  });
+
+  /* ---------- save contact (no phone number) ---------- */
+  document.getElementById('vcard').addEventListener('click', () => {
+    const v = ['BEGIN:VCARD','VERSION:3.0','N:Gkararizos;George;;;','FN:Γιώργος Γκαραρίζος (George Gkararizos)','TITLE:Videographer','EMAIL;TYPE=INTERNET:gkararizosg@gmail.com','URL:https://www.instagram.com/gararizosgeorge/','X-SOCIALPROFILE;TYPE=instagram:https://www.instagram.com/gararizosgeorge/','ADR;TYPE=WORK:;;;Larissa;;;Greece','END:VCARD'].join('\r\n');
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([v], {type:'text/vcard'}));
+    a.download = 'Gkararizos-George.vcf';
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+    play('copy');
+  });
+
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  applyLang();
+})();
+</script>
+</body>
+</html>
